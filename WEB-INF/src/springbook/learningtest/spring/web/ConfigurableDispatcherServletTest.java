@@ -12,7 +12,6 @@ public class ConfigurableDispatcherServletTest {
 		ConfigurableDispatcherServlet servlet = new ConfigurableDispatcherServlet();
 		servlet.setRelativeLocations(getClass(), "spring-servlet.xml");
 		
-//		servlet.setClasses(HelloSpring.class);
 		
 	}
 }
