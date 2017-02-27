@@ -13,6 +13,8 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockServletConfig;
 import org.springframework.web.servlet.ModelAndView;
 
+import springbook.learningtest.spring.web.hello.HelloSpring;
+
 public class ConfigurableDispatcherServletTest {
 
 	
@@ -22,7 +24,7 @@ public class ConfigurableDispatcherServletTest {
 		servlet.setRelativeLocations(getClass(), "spring-servlet.xml");
 		
 		//class µî·Ï
-//		servlet.setClasses(HelloSpring.class);
+		servlet.setClasses(HelloSpring.class);
 		
 		servlet.init(new MockServletConfig("spring"));
 		
@@ -33,7 +35,7 @@ public class ConfigurableDispatcherServletTest {
 		
 		ModelAndView mav = servlet.getModelAndView();
 		assertThat(mav.getViewName(), is("/WEB-INF/view/hello.jsp"));
-		assertThat((String)mav.getModel().get("message"), is("hello Spring"));
+		assertThat((String)mav.getModel().get("message"), is("Hello Spring"));
 		
 		
 		

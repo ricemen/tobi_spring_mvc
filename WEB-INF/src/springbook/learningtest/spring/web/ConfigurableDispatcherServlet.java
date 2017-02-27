@@ -6,6 +6,9 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.persistence.internal.oxm.StrBuffer;
 import org.springframework.beans.BeansException;
@@ -84,6 +87,11 @@ public class ConfigurableDispatcherServlet extends DispatcherServlet {
 		wac.refresh();
 		
 		return wac;
+	}
+	
+	protected void render(ModelAndView mv, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		this.modelAndView = mv;
+		super.render(mv, request, response);
 	}
 	
 	protected ModelAndView getModelAndView() {
