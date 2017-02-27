@@ -54,7 +54,7 @@ public class ConfigurableDispatcherServlet extends DispatcherServlet {
 		this.setLocations(locations);
 	}
 
-	public void setClasses(Class<?>[] classes) {
+	public void setClasses(Class<?> ...classes) {
 		this.classes = classes;
 	}
 	
