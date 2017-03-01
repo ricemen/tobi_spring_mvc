@@ -1,4 +1,4 @@
-<%@page import="springbook.temp.HelloSpring"%>
+<%@page import="springbook.learningtest.spring.web.hello.HelloSpring"%>
 <%@page import="org.springframework.web.context.support.WebApplicationContextUtils"%>
 <%@page import="org.springframework.context.ApplicationContext"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
